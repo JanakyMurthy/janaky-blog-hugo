@@ -1,8 +1,9 @@
-baseURL = "http://example.org/"
+baseURL = "https://janakymurthy.github.io/"
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
 enableEmoji = true
+publishdir = "janakymurthy.github.io"
 # pagination = 10
 
 title = "Janaky's Blog"
