@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Janaky&#39;s Blog</title>
+    <link>https://janakymurthy.github.io/categories/</link>
+    <description>Recent content in Categories on Janaky&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>[Home](/) &amp;#183; Theme [Simpleness](https://github.com/RainerChiang/simpleness) Powered by [Hugo](https://gohugo.io/)</copyright>
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://janakymurthy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Basic Math</title>
+      <link>https://janakymurthy.github.io/categories/basic-math/</link>
+      <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://janakymurthy.github.io/categories/basic-math/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

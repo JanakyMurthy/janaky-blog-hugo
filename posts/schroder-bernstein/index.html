@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.76.4" />
+
+  <title> The Schröder–Bernstein theorem |  Janaky&#39;s Blog</title>
+  <meta name="description" content="Explanation of the proof of the Schröder–Bernstein theorem">
+  <link rel="stylesheet" href="https://janakymurthy.github.io/css/simpleness.css">
+  <link rel="canonical" href="https://janakymurthy.github.io/posts/schroder-bernstein/">
+  <link rel="alternate" type="application/rss+xml" href="" title="Janaky&#39;s Blog">
+  
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+   tex2jax: {
+     inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+     processEscapes: true
+   }
+ });
+</script>
+
+<script type="text/javascript"
+       src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+  <header class="menus">
+  
+
+  <nav >
+    
+    <a href="/"> Home</a>
+    
+    <a href="/about/"> About</a>
+    
+  </nav>
+
+  <nav class="fontawesome">
+    
+    <a href="https://github.com/JanakyMurthy" target="_blank">
+        <i title="GitHub" class="fab fa-github"></i>
+    </a>
+    
+    
+    <a href="https://janakymurthy.github.io/index.xml" target="_blank">
+        <i title="RSS" class="fas fa-rss"></i>
+    </a>
+    
+  </nav>
+  
+  
+</header>
+
+<article class="article">
+  <header>
+    <h1 style="text-align: center;" >The Schröder–Bernstein theorem</h1>
+
+    <div class="post-meta">
+    
+      <time datetime="2020-08-10T00:00:00Z">August 10, 2020</time> &nbsp; 
+    
+
+    Janaky Murthy &nbsp;
+
+    
+    
+    
+
+    
+      <i class="far fa-clock"></i>
+      
+      
+      
+
+      
+        4 min
+      
+      1 second
+      &nbsp;
+    
+
+    
+      <i class="fas fa-folder"></i>
+      
+      <a href="/categories/basic-math">Basic Math</a>
+      &nbsp;
+      
+    
+    </div>
+  </header>
+
+   
+
+  <div class="text">
+    <p>I decided that my first blog post should be about something that gave me the &lsquo;wow&rsquo; feeling - and I immediately knew that it has to be the <strong>Schröder–Bernstein theorem</strong>. The proof of this theorem was skipped in the lecture (as an exercise :P) and I was waiting for the lecture to get over to try the proof. After hours of failed attempt, I thought I might be missing something trivial and decided to google it. I am a fan of elegant proofs and this theorem has been close to my heart ever since. Okay, lets cut the drama and jump straight into the theorem.</p>
+<h3 id="the-schröderbernstein-theorem">The Schröder–Bernstein theorem</h3>
+<p><strong>Theorem:</strong> Let $A,B$ be any sets. If there are <a href="https://en.wikipedia.org/wiki/Injective_function">injective functions</a>  $f:A \rightarrow B$ and $g:B \rightarrow A$ then there exists a <a href="https://en.wikipedia.org/wiki/Bijection#:~:text=In%20mathematics%2C%20a%20bijection%2C%20bijective,element%20of%20the%20first%20set.">bijection</a> $h: A \rightarrow B$.</p>
+<p><img src="/blog_docs/schroder_bernstein/sets_A_B.png" alt=""></p>
+<p>Before going into the proof, I would like to introduce you to an alternate restatement of this theorem. This is not used in the proof and can be skipped.</p>
+<p>Let us first fix the following terminologies.</p>
+<ul>
+<li>|A| denotes the <strong>cardinality</strong> of set $A$.</li>
+<li>$|{1,\ldots,n }|=n$.</li>
+<li>If there exists an injection $f: A \rightarrow B$, we say $|A| \leq |B|$.</li>
+<li>We say that $|A| = |B|$ if there exists a bijection $f: A \rightarrow B$.</li>
+<li>As an example for infinite sets, $|\mathbb{N}| = |2\mathbb{N}|$ ($2\mathbb{N}$ is the set of all even natural numbers).</li>
+</ul>
+<p>The Schröder–Bernstein theorem can now be restated as follows:</p>
+<p><strong>Theorem (restated):</strong> For any sets $A,B$, if $|A| \leq |B|$ and $|B| \leq |A|$ then $|A| = |B|$.</p>
+<h3 id="proof-finite-case">Proof (Finite Case)</h3>
+<p>Let us do an easy special case first. Say $A = {a_1, \ldots, a_n}$ and $B={b_1,\ldots,b_k }$ be finite sets with injections $f: A \rightarrow B$ and $g: B \rightarrow A$. If $f(A) = B$, we are done as $f$ is a bijection as well. We now argue that if $f(A) \subsetneq B$ then there can not exist any injection from $B$ to $A$ which is a contradiction. Since $f$ is an injection $f(a_i) \neq f(a_j)$ for $i \neq j$, meaning $B$ can be written as $B = {f(a_1), \ldots, f(a_n), b_{n+1}, \ldots, b_k }$. As $k &gt;n$, by <a href="https://en.wikipedia.org/wiki/Pigeonhole_principle">pigeonhole principle</a> there can not exist an injection from $B \rightarrow A$.</p>
+<h3 id="proof-infinite-case">Proof (Infinite Case)</h3>
+<p>The above proof idea does not carry over to the case when $A$ and $B$ are not finite. There are various proofs of this theorem. The proof presented in this post is based on what I read from <!-- raw HTML omitted -->here<!-- raw HTML omitted --> (although I have used my own terminologies and visualized this as a graph).</p>
+<p>Construct a <strong>directed graph</strong> $G(V,E)$ as follows:</p>
+<ul>
+<li>$V = A \cup B$.</li>
+<li>$E = {(a,f(a)) : \forall a \in A} \cup {(b,g(b)) : \forall b \in B}$.</li>
+</ul>
+<p><img src="/blog_docs/schroder_bernstein/graph_G.png" alt=""></p>
+<p>It follows from the injectivity of $f$ and $g$, that both the <strong>indegree and outdegree of any vertex in this graph is atmost 1</strong>. So chains that have branches (as shown in the following diagrams) can not exist.</p>
+<p><img src="/blog_docs/schroder_bernstein/f_injectivity.png" alt=""></p>
+<p><img src="/blog_docs/schroder_bernstein/g_injectivity.png" alt=""></p>
+<p>Hence the graph $G$ consists of <strong>disjoint componenets</strong> each of which is either a <strong>cycle</strong> or an <strong>infinite chain</strong>.</p>
+<p><img src="/blog_docs/schroder_bernstein/cycles.png" alt=""></p>
+<p><img src="/blog_docs/schroder_bernstein/infinite_chains.png" alt=""></p>
+<p>An infinite chain can either start with a vertex from set $A$ (that is a blue vertex) or a vertex from set $B$ (a pink vertex). Let us call them <strong>blue chains</strong> and <strong>pink chains</strong> respectively. Observe that the first element of each pink chain do not have an incoming edge and these are precisely those elements in B that does not have a pre-image with respect to $f$. <strong>The idea is to modify the pink chains so that all pink elements in this chain has exactly one incoming edge while preserving the number of outgoing edges of the blue elements</strong>.</p>
+<p>We are now ready to define our bijection $h: A \rightarrow B$.</p>
+<p>Since all pink elements in cycles and blue chains have an incoming edge, <strong>$h$ mimics $f$ for the blue elements in these components.</strong></p>
+<p><img src="/blog_docs/schroder_bernstein/h1.png" alt=""></p>
+<p>However on pink chains, <strong>$h$ maps each blue element to its parent vertex in the graph $G$.</strong></p>
+<p><img src="/blog_docs/schroder_bernstein/h2.png" alt=""></p>
+<p>More formally $h: A \rightarrow B$ is defined as:</p>
+<p>$
+h(a) = \begin{cases}f(a) ; a \in \text{blue chain or a cycle}\cr
+g^{-1}(a) ; a \in \text{pink chain}\end{cases}
+$</p>
+<p>Let us verify that $h$ is a bijection. First of all $h$ is a valid function as $h$ is defined on all blue vertices and each blue vertex has outdegree 1. Further each pink vertex has indegree exactly equal to 1 implying $h$ is a bijection. That&rsquo;s all - we are done :)</p>
+<p><strong>Aside:</strong> Observe that if $A$ and $B$ were finite sets then all the components are cycles!</p>
+<p><strong>Remarks</strong></p>
+<ol>
+<li>There are various proofs of this theorem and the ideas used in this version are very similar to Konig&rsquo;s proof of this theorem.</li>
+<li>This theorem is also referred to as <strong>Cantor–Schröder–Bernstein theorem</strong>.</li>
+<li><strong>Any mistakes - technical, typos or any other mistake are solely my own</strong>. Please let me know if you spot any. Thanks!</li>
+</ol>
+
+  </div>
+
+  <footer>
+    <hr class="end-line">
+
+    
+
+    
+    <div class="post-tags">
+      <i class="fas fa-tags"></i>
+      
+        <a href="/tags/math">Math</a>
+        &nbsp;
+      
+    </div>
+    
+
+    
+    
+  </footer>
+
+  <div class="comments">
+
+
+
+</div>
+
+</article>
+
+
+</body>
+<div class="foot">
+  
+  
+    &copy; 2019 - 2021 &#183; 
+    <a href="/">Home</a> · Theme <a href="https://github.com/RainerChiang/simpleness">Simpleness</a> Powered by <a href="https://gohugo.io/">Hugo</a> &#183;
+    <a href="#"><i class="fas fa-chevron-up"></i></a>
+  
+
+  
+</div>
+
+<script src="/js/lazyload.min.js"></script>
+<script>
+  var lazyImage = new LazyLoad({
+    container: document.getElementById('article')
+  });
+</script>
+
+
+</html>
