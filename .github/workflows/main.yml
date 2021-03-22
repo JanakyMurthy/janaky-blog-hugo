@@ -28,7 +28,7 @@ jobs:
           external_repository: <username>/<username>.github.io
           publish_dir: ./public
           #   keep_files: true
-          user_name: janakymurthy
-          user_email: janaky96@gmail.com
+          user_name: JanakyMurthy
+          user_email: janakymurthy
           publish_branch: master
         #   cname: example.com
